@@ -61,6 +61,8 @@ class _FormIMCState extends State<FormIMC> {
 
                     if (altura == 0) {
                       print("Não é possivel dividir por zero!");
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                          content: Text("Não é possivel dividir por zero!")));
                     } else {
                       setState(() {
                         imc = (peso * peso) / altura;
